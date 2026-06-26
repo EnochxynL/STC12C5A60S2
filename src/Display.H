@@ -3,8 +3,8 @@
 
 extern unsigned int pulse;
 extern unsigned int speed;
-extern bit timer0flag;
-extern bit timer1flag;
+extern __bit timer0flag;
+extern __bit timer1flag;
 
 
 

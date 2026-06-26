@@ -4,8 +4,8 @@
 #define TIME100us  92  //100us
 #define TIME10us  9  //10us
 #define TIME1us   1
-sbit DQ = P2^6;  
-bit Reset;
+__sbit __at(0xA6) DQ;  
+__bit Reset;
 
 
 //bit delay(int x)
@@ -72,7 +72,7 @@ void  TimeDelay2us()
 	__asm__("nop");
 }
 /***************************DS18B20  Operation***************************/
-bit DS18B20_Reset(void)          // Return value:0--Fail  1--Success
+__bit DS18B20_Reset(void)          // Return value:0--Fail  1--Success
 {
 	DQ=0;
 	TimeDelay500us();
@@ -90,7 +90,7 @@ bit DS18B20_Reset(void)          // Return value:0--Fail  1--Success
 }
 
 /****************************Write one bit******************************/
-void WriteBit(bit w)
+void WriteBit(__bit w)
 {
 	DQ=0;
 	TimeDelay2us();
@@ -106,7 +106,7 @@ void WriteBit(bit w)
 	}
 }
 /******************************Read one bit****************************/
-bit ReadBit(void)
+__bit ReadBit(void)
 {
 	DQ=0;
 	TimeDelay2us();
@@ -138,7 +138,7 @@ void WriteByte(unsigned char byt)
 /***********读1字节**************/
 unsigned char ReadByte(void)
 {
-	bit r;
+	__bit r;
 	unsigned char i,dat;
 	for(i=0;i<8;i++)
 	{

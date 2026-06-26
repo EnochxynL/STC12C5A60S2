@@ -2,18 +2,18 @@
 #define _UART_H_
 
 
-sfr AUXR=0X8E;
-sfr BTR=0X9C;
+__sfr __at(0x8E) AUXR;
+__sfr __at(0x9C) BTR;
 
-extern bit RI_Flag;
-extern bit Start_Flag;
-extern bit Reset_Flag;
-extern bit close_loop;
-extern bit open_loop;
+extern __bit RI_Flag;
+extern __bit Start_Flag;
+extern __bit Reset_Flag;
+extern __bit close_loop;
+extern __bit open_loop;
 extern unsigned int uSpeed;
-extern bit U_Flag;
-extern bit speed_flag;
-extern bit temp_flag;
+extern __bit U_Flag;
+extern __bit speed_flag;
+extern __bit temp_flag;
 
 void UART_init(unsigned int baud);
 //unsigned char GetByte(void);

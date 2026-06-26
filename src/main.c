@@ -1,18 +1,18 @@
 #include <8052.h>
-#include <UART.h>
+#include <UART.H>
 #include <PWM.h>
 #include <DS18B20.h>
-#include <STC12C5A60S2.h>
-#include <HEATERDRIVE.h>
+#include <STC12C5A60S2.H>
+#include <HEATERDRIVE.H>
 #include <TM1638.h>
-#include <Display.h>
-#include <MOTORDRIVE.h>
+#include <Display.H>
+#include <MOTORDRIVE.H>
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
 
-sfr ISP_CONTR = 0xC7;
-bit RI_Flag_Control = 0;
+__sfr __at(0xC7) ISP_CONTR;
+__bit RI_Flag_Control = 0;
 // bit open_loop_setpwm_flag = 1;
 unsigned int TempShow = 0;
 //unsigned int Temp12filterNum = 0;

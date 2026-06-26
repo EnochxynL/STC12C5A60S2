@@ -1,9 +1,9 @@
 #include <8052.h>
 #include <MOTORDRIVE.H>
 
-sbit ENMOTOR=P1^1;        //ENABLEA
-sbit MOTOR1=P1^2;  	      //IN2
-sbit MOTOR2=P1^3;         //pwm pin
+__sbit __at(0x91) ENMOTOR;        //ENABLEA
+__sbit __at(0x92) MOTOR1;         //IN2
+__sbit __at(0x93) MOTOR2;         //pwm pin
 
 void InitMotor()
 {

@@ -1,20 +1,20 @@
 #include <8052.h>
-#include <UART.h>
+#include <UART.H>
 #include <string.h>
 
 
 unsigned char irbuff = 0;
 unsigned char  UsartReadCnt = 0; 
 unsigned char  UsartReadBuff[4];
-bit RI_Flag = 0;
-bit Start_Flag = 0;
-bit Reset_Flag = 0;
-bit open_loop = 0;
-bit close_loop = 0;
-bit speed_flag = 0;
-bit temp_flag = 0;
+__bit RI_Flag = 0;
+__bit Start_Flag = 0;
+__bit Reset_Flag = 0;
+__bit open_loop = 0;
+__bit close_loop = 0;
+__bit speed_flag = 0;
+__bit temp_flag = 0;
 unsigned int uSpeed = 0;
-bit U_Flag = 0;
+__bit U_Flag = 0;
 
 /*************波特率配置函数********************/
 
@@ -47,7 +47,7 @@ void SendByte(unsigned char dat)
 //	}
 //}
 
-void uart() interrupt 4
+void uart() __interrupt 4
 {
 	if(RI)
 	{

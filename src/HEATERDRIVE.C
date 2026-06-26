@@ -1,9 +1,9 @@
 #include <8052.h>
-#include <HEATERDRIVE.h>
+#include <HEATERDRIVE.H>
 
-sbit ENHEATER=P1^6;
-sbit HEATER1=P1^4;     //PWM1
-sbit HEATER2=P1^5;
+__sbit __at(0x96) ENHEATER;
+__sbit __at(0x94) HEATER1;     //PWM1
+__sbit __at(0x95) HEATER2;
 
 void Heater_Init(void)
 {

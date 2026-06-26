@@ -1,7 +1,7 @@
 #include <8052.h>
 #include <TM1638.h>
-#include <Display.h>
-#include <UART.h>
+#include <Display.H>
+#include <UART.H>
 
 // TIME用于速度实验定时设置
 // 5ms:4608, 10ms:9216, 15ms:13824, 20ms:18432, 25ms:23040, 30ms:27648, 40ms:36864, 50ms:46080, 60ms:55296, 70ms:64512
@@ -18,8 +18,8 @@ const unsigned char  CathodeCode1[11] = {0xBF, 0X86, 0XDB, 0xCF, 0XE6, 0XED, 0XF
 
 unsigned int pulse = 0;
 unsigned int speed = 0;
-bit timer0flag = 0;
-bit timer1flag = 0;
+__bit timer0flag = 0;
+__bit timer1flag = 0;
 // unsigned int timer0flag_i = 0;
 
 
@@ -71,12 +71,12 @@ void ConfigINT0()
 	IT0=1;		   // 低电平后产生外部中断
 }
 // 速度实验外部中断
-void Int0() interrupt 0 
+void Int0() __interrupt 0 
 {
 		pulse++;
 }
 // 速度实验定时器中断
-void Timer0() interrupt 1  
+void Timer0() __interrupt 1  
 {
 	if(speed_flag == 1)
 	{
@@ -100,7 +100,7 @@ void Timer0() interrupt 1
 }
 
 // 温度实验定时器中断, 定时1秒
-void Timer1() interrupt 3  
+void Timer1() __interrupt 3  
 {
 	static unsigned char i=0;
 	TH1=(65536-TIME1)/256;      
@@ -162,10 +162,10 @@ void displaySpeed(unsigned int num)
       }
 }
 
-bit delay1(int x)
+__bit delay1(int x)
 {
 	int i,j;
-	bit a=0;
+	__bit a=0;
 	for(i=0;i<x;i++)
 	{
 		for(j=0;j<110;j++)
