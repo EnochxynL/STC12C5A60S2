@@ -1,2 +1,0 @@
-#define EX_EDGEMODE_0 IT0
-#define EX_EDGEMODE_1 IT1
