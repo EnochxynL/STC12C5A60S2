@@ -33,7 +33,9 @@
             "editor.insertSpaces": true,
             "editor.tabSize": 4,
             "editor.autoIndent": "advanced"
-        }
+        },
+        "EIDE.MCP.Server.Enable": true,
+        "EIDE.MCP.Server.Port": 8940
     },
     "extensions": {
         "recommendations": [
