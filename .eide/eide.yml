@@ -17,7 +17,7 @@ targets:
   Release:
     cppPreprocessAttrs:
       defineList:
-        - CLOCK=16
+        - CLOCK=16000000
       incList:
         - src
       libList: []
