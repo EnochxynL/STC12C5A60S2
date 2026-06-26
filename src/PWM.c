@@ -1,5 +1,4 @@
-#include <reg51.h>
-#include <intrins.h>
+#include <8052.h>
 #include <PWM.h>
 
 

@@ -1,5 +1,4 @@
-#include <reg51.h>
-#include <intrins.h>
+#include <8052.h>
 #include <DS18B20.h>
 
 #define TIME100us  92  //100us
@@ -65,12 +64,12 @@ void TimeDelay60us()
 }
 void  TimeDelay2us()
 {
-	_nop_();
-	_nop_();
-	_nop_();
-	_nop_();
-	_nop_();
-	_nop_();
+	__asm__("nop");
+	__asm__("nop");
+	__asm__("nop");
+	__asm__("nop");
+	__asm__("nop");
+	__asm__("nop");
 }
 /***************************DS18B20  Operation***************************/
 bit DS18B20_Reset(void)          // Return value:0--Fail  1--Success

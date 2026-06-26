@@ -1,5 +1,4 @@
-#include <reg51.h>
-#include <intrins.h>
+#include <8052.h>
 #include <UART.h>
 #include <PWM.h>
 #include <DS18B20.h>

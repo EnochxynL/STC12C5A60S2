@@ -1,5 +1,5 @@
-#include <reg51.h>
-#include <heaterdrive.h>
+#include <8052.h>
+#include <HEATERDRIVE.h>
 
 sbit ENHEATER=P1^6;
 sbit HEATER1=P1^4;     //PWM1

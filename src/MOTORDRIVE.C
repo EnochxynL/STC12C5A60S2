@@ -1,4 +1,4 @@
-#include <REG51.H>
+#include <8052.h>
 #include <MOTORDRIVE.H>
 
 sbit ENMOTOR=P1^1;        //ENABLEA

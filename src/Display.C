@@ -1,5 +1,4 @@
-#include <reg51.h>
-#include <intrins.h>
+#include <8052.h>
 #include <TM1638.h>
 #include <Display.h>
 #include <UART.h>

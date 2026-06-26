@@ -1,4 +1,4 @@
-#include <reg51.h>
+#include <8052.h>
 #include <PID.h>
 #include <PWM.h>
 
