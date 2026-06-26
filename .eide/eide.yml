@@ -1,7 +1,7 @@
 version: "4.1"
-name: mcs51_dht11_sdcc_quickstart
+name: STC12C5A60S2
 type: C51
-deviceName: null
+deviceName: STC12C5A60S2
 packDir: null
 srcDirs:
   - src
@@ -36,7 +36,7 @@ targets:
             language-c: c99
           global:
             device: mcs51
-            misc-controls: --iram-size 256 --xram-size 0 --code-size 8192
+            misc-controls: --iram-size 256 --xram-size 1024 --code-size 61440
             optimize-type: speed
           linker:
             $mainFileName: main
